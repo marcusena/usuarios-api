@@ -1,11 +1,11 @@
 module.exports = {
     client: "mysql2",
     connection: {
-        host: "localhost",
-        port: "3306",
+        host: "containers-us-west-154.railway.app",
+        port: "6046",
         user: "root",
-        password: "password",
-        database: "api-node"
+        password: "ta1u2XLWH1niUipvOMJo",
+        database: "railway"
     },
     pool: {
         min: 2,
