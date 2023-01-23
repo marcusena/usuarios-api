@@ -29,9 +29,16 @@ module.exports = (app) => {
     if(req.params.id) {
       category.id = req.params.id;
     }
+    
+    if (!category.name && !category.email) {
+      return res.status(400).json({ error: "Favor enviar os parametros name e email" });
+    }
 
-    if (!category.name & !category.email) {
-      return res.status(400).json({ error: "Favor enviar name e email" });
+    if (!category.name) {
+      return res.status(400).json({ error: "Favor enviar o parametro name" });
+    }
+    if (!category.email) {
+      return res.status(400).json({ error: "Favor enviar o parametro email" });
     }
 
     const categoryNameExists = await app
