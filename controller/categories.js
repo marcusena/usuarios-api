@@ -31,14 +31,14 @@ module.exports = (app) => {
     }
     
     if (!category.name && !category.email) {
-      return res.status(400).json({ error: "Favor enviar os parametros name e email" });
+      return res.status(400).json({ error: "Favor enviar os parametros name e email com seus valores preenchidos." });
     }
 
     if (!category.name) {
-      return res.status(400).json({ error: "Favor enviar o parametro name" });
+      return res.status(400).json({ error: "Favor enviar o parametro name." });
     }
     if (!category.email) {
-      return res.status(400).json({ error: "Favor enviar o parametro email" });
+      return res.status(400).json({ error: "Favor enviar o parametro email." });
     }
 
     const categoryNameExists = await app
