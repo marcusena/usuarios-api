@@ -5,6 +5,7 @@ const database = require("./database/db");
 
 
 app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 app.database = database;
 
 consign()
